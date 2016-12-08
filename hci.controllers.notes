@@ -1,0 +1,34 @@
+HOST CONTROLLER INTERFACES (HCI)
+
+In general, an HCI is a register-level interface that enables a host
+controller for USB hardware to communicate with a host controller driver
+in software.
+
+OHCI
+
+Open Host Controller Interface.  Consortrium of Compaq, Microsoft, National
+Semiconductor) Supports USB 1.1 full (12 Mbit/s) and low speeds (1.5 Mbit/s).
+
+
+UHCI
+
+Universal Host Controller Interface.  Intel's OHCI; same full and low speeds.
+
+EHCI
+
+Enhanced Host Controller Interface.  Intel, no licence necessary.  Supports
+USB 2.0 high speed (480 Mbit/s).  Originally needed OHCI or UHCI for full/low
+speeds and EHCI for high speed; now, all ports routed through an internal
+"rate-matching" hub and EHCI indirectly deals with all three speeds.
+
+XHCI
+
+Newest interface (since Dec. 2009) supports USB 3.0 and up to 5 Gbit/s speeds
+(SuperSpeed).
+
+AHCI
+
+Advanced Host Controller Interface.  Intel.  Controls operation of Serial ATA
+host bus adapters.  BIOS may have selectable modes:  legacy PATA, AHCI, RAID
+AHCI, etc.  (See 780's BIOS for good list of choices.  Legacy will show as
+IDE to OpenBSD.)
